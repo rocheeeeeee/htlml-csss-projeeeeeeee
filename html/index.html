@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş / Kayit Ekrani</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container rigt-panel-active">
+        <div class="container__form container--signup">
+            <form action=""class="form" id="form1">
+                <h2 class="form__title">Kayit Ol</h2>
+                <input type="text" placeholder="Kullanici"class="input">
+                <input type="email" placeholder="E-Posta"class="input">
+                <input type="password"placeholder="Şifre"class="input">
+                <button class="byn">Kayit Ol</button>
+                
+
+            </form>
+        </div>
+
+        <div class="container__form container-signin">
+            <form action="form" id="form2">
+                <h2 class="form__title">Giriş Yap</h2>
+                <input type="email" placeholder="E-Posta"class="input">
+                <input type="password"placeholder="Şifre"class="input">
+                <button class="btn">Giriş Yap</button>
+            </form>
+
+        </div>
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn"id="signin">Giriş Yap</button>
+                </div>
+            </div>
+            <div class="overlay__panel overlay--right">
+                <button class="btn"id="container--signUp">Kayit Ol
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const signInBtn=document.getElementById("signIn");
+    const signUpBtn=document.getElementById("signUp");
+    const firstForm=document.getElementById("form1");
+    const secondFrom=document.getElementById("form2");
+    const container=document.querySelector(".container");
+
+    signInBtn.addEventListener("click", () => {
+        container.classList.remove("right-panel-active")
+    })
+    signUpBtn.addEventListener("click", () => {
+        container.classList.add("right-panel-active")
+    })
+</script>
+</html>
